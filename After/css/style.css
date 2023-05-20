@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Grid {
+    display: grid;
+    /* Si no definimos la altura del contenedor padre se adaptará al tamaño del contenido y si el mismo es disparejo on no tiene definido altura, no lograremos el objetido de maquetarlo correctamente. */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 40vh);
+    /* grid-template-rows: repeat(3, 1fr); */
+    /* En este caso el usar el 1fr seria conflictivo por que el tamaño lo definiria el contenido mismo y no el contenedor "area". */
+    grid-template-areas:
+        "contenedor-1 contenedor-1"
+        "contenedor-2 contenedor-3"
+        "contenedor-4 contenedor-4"
+    ;
+}
+
+
+/* Hijo 1 */
+.div__Container-1 {
+    background-color: purple;
+    grid-area: contenedor-1;
+    display: flex;
+    justify-content: space-around;
+    /* definimos el espacio que queremos que ocupe dentro del grid-template-area*/
+}
+
+/* Hijo 2 */
+.div__Container-2 {
+    background-color: gray;
+    grid-area: contenedor-2;
+    /* definimos el espacio que queremos que ocupe dentro del grid-template-area*/
+}
+
+/* Hijo 3 */
+main .Grid .div__Container-3 {
+    grid-area: contenedor-3;
+    /* definimos el espacio que queremos que ocupe dentro del grid-template-area*/
+    display: flex;
+    justify-content: space-around;
+}
+
+/* /////////////////////////  div contenedor de la imagen 1  /////////////////////////// */
+main .Grid .div__Container-3 .div__Container--1-Hijo1 {
+    border: 1px solid white;
+    width: 30%;
+    object-fit: cover;
+}
+
+/* /////////////////////////  div contenedor de la imagen 2  /////////////////////////// */
+main .Grid .div__Container-3 .div__Container--1-Hijo2 {
+    border: 1px solid white;
+    width: 30%;
+    object-fit: cover;
+}
+
+/* /////////////////////////  div contenedor de la imagen 2  /////////////////////////// */
+main .Grid .div__Container-3 .div__Container--1-Hijo3 {
+    border: 1px solid white;
+    width: 30%;
+    object-fit: cover;
+}
+
+/* Hijo 4 */
+.div__Container-4 {
+    grid-area: contenedor-4;
+    /* definimos el espacio que queremos que ocupe dentro del grid-template-area*/
+    background-color: lightcoral;
+}
+
+
+
+
+
+
+@media (max-width: 700px) {
+    .Grid {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            "contenedor-1"
+            "contenedor-2"
+            "contenedor-3"
+            "contenedor-4"
+        ;
+    }
+}
