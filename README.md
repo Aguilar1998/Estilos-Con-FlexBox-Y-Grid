@@ -1,8 +1,3 @@
-# Proyectos
-
--After
--Cafe Oslo
-
 ### CSS utility in projects
 
 ```mermaid
