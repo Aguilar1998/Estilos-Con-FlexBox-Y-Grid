@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main section {
+    background-color: #E1D4BB;
+    display: grid;
+    grid-template-columns: repeat(6, 16%);
+    grid-template-rows: repeat(7, 12%);
+    grid-template-areas:
+        " .   .     .     .     .   . "
+        " . img-1 img-2 img-2 img-5 . "
+        " . img-1 img-3 img-4 img-5 . "
+        " . img-1 img-3 img-4 img-5 . "
+        " . img-1 img-6 img-6 img-6 . "
+        " . img-7 img-7 img-7 img-7 . "
+        " . img-7 img-7 img-7 img-7 . "
+        " .   .     .     .     .   . "
+    ;
+    gap: 1rem;
+}
+
+.main section .img-uno,
+.main section .img-dos,
+.main section .img-tres,
+.main section .img-cuatro,
+.main section .img-cinco,
+.main section .img-seis,
+.main section .img-siete {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.main section .img-uno {
+    grid-area: img-1;
+}
+
+.main section .img-dos {
+    grid-area: img-2;
+}
+
+.main section .img-tres {
+    grid-area: img-3;
+}
+
+.main section .img-cuatro {
+    grid-area: img-4;
+}
+
+.main section .img-cinco {
+    grid-area: img-5;
+}
+
+.main section .img-seis {
+    grid-area: img-6;
+}
+
+.main section .img-siete {
+    grid-area: img-7;
+}
